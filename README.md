@@ -1,6 +1,5 @@
 # 눈물의 자소서
-![첫화면](https://github.com/EunSung98/coverlettershelf/assets/77737044/2b582025-3090-4f8a-aca8-e2abf1539fa1){:width="40%" height="40%"}
-
+<img src="https://github.com/EunSung98/coverlettershelf/assets/77737044/2b582025-3090-4f8a-aca8-e2abf1539fa1" width="40%" height="40%"/>
 ---
 ## 소개
 - 과제로 만든 자기소개서 정리 사이트
