@@ -8,7 +8,7 @@ import java.sql.SQLException;
 
 public class JDBCUtil {
 	static String id = "root";
-	static String pass = "mary*^^7308";
+	static String pass = "";
 	static String url = "jdbc:mysql://localhost:3306/coverletter?characterEncoding=utf-8";
 
 	Connection conn = null;
@@ -18,15 +18,12 @@ public class JDBCUtil {
 	public static Connection getConnection() {
 
 		try {
-			// 1. driver loading
 			Class.forName("com.mysql.jdbc.Driver");
 			System.out.println("mysql driver loading success");
 
-			// 2. connect DB
 			return DriverManager.getConnection(url, id, pass);
 
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -51,7 +48,6 @@ public class JDBCUtil {
 				if (!conn.isClosed())
 					conn.close();
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			} finally {
 				conn = null;
@@ -63,7 +59,6 @@ public class JDBCUtil {
 				if (!rs.isClosed())
 					rs.close();
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			} finally {
 				rs = null;
