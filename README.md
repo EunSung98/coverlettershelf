@@ -34,7 +34,7 @@
 - cookie로 아이디 저장 기능
 - 자기소개서 게시판 기능 (CRUDS)
 - trigger을 이용해 자기소개서 data 관리 (questions table의 fk키가 없어지면 row 삭제)
-- 계정 탈퇴 실수를 방지 -> procedure로 10일내에 로그인 시 탈퇴 취소 
+- 계정 탈퇴 실수를 방지 -> procedure로 10일내에 로그인 시 탈퇴 취소
 ---
 ## [ 사이트 구조 ]
 < Controller >
@@ -73,6 +73,16 @@ BEGIN
     WHERE lastLogin < DATE_SUB(deleteDate, INTERVAL 10 DAY) AND deleteDate IS NOT NULL;
 END
 ```
+---
+## 공개 게시판 검색 기능
+![image](https://github.com/EunSung98/coverlettershelf/assets/77737044/fe444e7c-22cf-4bfa-af6a-25cbd3cf19df)
+
+## 계정 탈퇴 기능
+![image](https://github.com/EunSung98/coverlettershelf/assets/77737044/2880f9da-1f9d-4d0c-990c-2641a8419f2e)
+
+## 내 자소서 수정 & 내 정보 수정
+![image](https://github.com/EunSung98/coverlettershelf/assets/77737044/85e5a42d-ef98-4818-ac50-02b59a3167c6)
+
 ---
 ## [ View jsp 파일 설명 ]
 
