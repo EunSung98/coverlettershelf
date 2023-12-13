@@ -40,7 +40,7 @@
 ## coverletter DB의 ERD
 ![coverletter_erd](https://github.com/EunSung98/coverlettershelf/assets/77737044/7d724936-f1ac-4833-b423-ae5ce2e178a3)
 
-- 회원 아이디를 books 테이블의 외래키로 지정해 연결
+- 회원 아이디를 board 테이블의 FK로 지정 (update 시 : cascade, delete시 : set NULL)
 
 [ trigger ]
 - 외래키가 삭제될 때 해당 질문 row 삭제
@@ -79,17 +79,26 @@ BEGIN
 END 
 ```
 ---
-## [ 사이트 파일 내용 ]
+## [ View jsp 파일 설명 ]
 
-1. 공통으로 사용하는 파일
-![image](https://github.com/EunSung98/readMemo/assets/77737044/6413171f-1c08-4b9b-8063-b4aaaf36e5a9)
-
-2. 로그인/회원가입 페이지
-![image](https://github.com/EunSung98/readMemo/assets/77737044/e470aec7-a1fa-4520-b48e-9764281566b6)
-
-3. 메인 페이지
-![image](https://github.com/EunSung98/readMemo/assets/77737044/5735c337-2275-4c4c-b515-9ab38b7df5d8)
-
+1. 공통 파일
+- header.jsp : 로그인 유무에 따라 header가 변경
+- footer.jsp : 웹 페이지 밑 부분
+- error.jsp : error 발생시 이동
+2. 첫화면, 로그인/회원가입 
+- home.jsp : 간단한 소개, 로그인&회원가입 유도
+- loginService/login.jsp : 로그인
+- loginService/memberJoin.jsp : 회원가입
+3. 자소서 페이지
+- board/main.jsp
+- board/myPage.jsp
+- board/modifyPage.jsp
+- board/upload.jsp
+- board/total.jsp
+- board/page.jsp
+4. 회원 정보 
+- account/account.jsp
+- account/accountModify.jsp
 ---
 ### < 회원가입/로그인 페이지 >
 - 첫 번째 페이지에서 로그인 / 회원가입 선택
