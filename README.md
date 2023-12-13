@@ -1,5 +1,5 @@
 # 눈물의 자소서
-![첫화면](https://github.com/EunSung98/coverlettershelf/assets/77737044/2b582025-3090-4f8a-aca8-e2abf1539fa1)
+![첫화면](https://github.com/EunSung98/coverlettershelf/assets/77737044/2b582025-3090-4f8a-aca8-e2abf1539fa1){: width="50%" height="50%"}
 
 ---
 ## 소개
