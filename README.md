@@ -1,4 +1,6 @@
 # 눈물의 자소서
+![첫화면](https://github.com/EunSung98/coverlettershelf/assets/77737044/2b582025-3090-4f8a-aca8-e2abf1539fa1)
+
 ---
 ## 소개
 - 과제로 만든 자기소개서 정리 사이트
@@ -65,10 +67,10 @@ END;
 BEGIN
     UPDATE users
     SET deleteDate = NULL
-    WHERE lastLogin <= DATE_SUB(deleteDate, INTERVAL 10 DAY) AND deleteDate IS NOT NULL;
+    WHERE lastLogin >= DATE_SUB(deleteDate, INTERVAL 10 DAY) AND deleteDate IS NOT NULL;
 
     DELETE FROM users
-    WHERE lastLogin > DATE_SUB(NOW(), INTERVAL 10 DAY) AND deleteDate IS NOT NULL;
+    WHERE lastLogin < DATE_SUB(deleteDate, INTERVAL 10 DAY) AND deleteDate IS NOT NULL;
 END
 ```
 ---
@@ -131,11 +133,4 @@ END
 ![image](https://github.com/EunSung98/readMemo/assets/77737044/9d561d6a-33fb-4a8e-a30a-5f435a7ca62b)
 
 
----
-### < 감상문 로그아웃, 아이디 저장 >
-
-- 로그아웃 버튼으로 session에 있는 id 값 삭제
-- 로그인 페이지의 아이디 저장으로 쿠키에 남은 id 값
-
-![image](https://github.com/EunSung98/readMemo/assets/77737044/58f1976f-4761-4894-af66-223f10c2e4a8)
 
