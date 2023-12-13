@@ -94,39 +94,6 @@ END
 4. 회원 정보 
 - account/account.jsp
 - account/accountModify.jsp
----
-### < 자기소개서 CRUD >
-- 첫 번째 페이지에서 로그인 / 회원가입 선택
-- 회원 가입 후, 로그인
-- onsubmit을 이용해서 유효성 검사
-
-회원가입 (firstStep/signUp.jsp)
-![image](https://github.com/EunSung98/readMemo/assets/77737044/d3bbcfb4-fe73-45b7-8656-9b792c88b7f5)
-
-로그인
-(firstStep/login.jsp)
-![image](https://github.com/EunSung98/readMemo/assets/77737044/58ac383b-b003-4423-94ec-b34762e10d78)
-
-
----
-### < 자기소개서 검색 >
-- 제목, 저자, 감상문을 입력해서 저장
-- 감상문 등록 (memo/upload.jsp)
-- 감상문 전체 보기 (memo/diary.jsp)
-
-![image](https://github.com/EunSung98/readMemo/assets/77737044/3233edc3-8cf4-4060-88fc-44fc1ba931f4)
-
----
-### < 공개 자기소개서 보기 >
-
-- 제목, 저자, 감상문을 수정해서 저장
-- 감상문 수정(memo/modify.jsp)
-
-![image](https://github.com/EunSung98/readMemo/assets/77737044/de6498a7-ae43-413e-b832-a823fc18d237)
-
-
----
-### < 계정 탈퇴 >
 
 - 삭제 버튼으로 삭제하기
 
