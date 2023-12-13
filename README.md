@@ -39,9 +39,35 @@
 
 ![image](https://github.com/EunSung98/readMemo/assets/77737044/e71fe4f2-aa7e-41b0-b710-f777574d0d8c)
 
-## culturememo DB의 ERD
-![image](https://github.com/EunSung98/readMemo/assets/77737044/0c1b8bb3-c385-4bc5-9784-e3868712a951)
+## coverletter DB의 ERD
+![coverletter_erd](https://github.com/EunSung98/coverlettershelf/assets/77737044/7d724936-f1ac-4833-b423-ae5ce2e178a3)
+
 - 회원 아이디를 books 테이블의 외래키로 지정해 연결
+
+[ 10일 내에 로그인시 계정 탈퇴 취소되는 procedure ]
+```sql
+CREATE PROCEDURE deleteAccount()
+BEGIN
+  DECLARE currentDate TIMESTAMP;
+  DECLARE tenDaysAgo TIMESTAMP;
+
+  -- 현재 시간 
+  SET currentDate = NOW();
+
+  -- 10일 전 날짜 계산
+  SET tenDaysAgo = DATE_SUB(currentDate, INTERVAL 10 DAY);
+
+  -- 10일내 로그인 하는지 확인
+  UPDATE users
+  SET deleteDate = NULL
+  WHERE lastLogin >= tenDaysAgo;
+
+  -- 10일 이후인 회원 삭제
+  DELETE FROM users
+  WHERE deleteDate IS NOT NULL AND deleteDate < tenDaysAgo;
+
+END 
+```
 ---
 ## [ 사이트 파일 내용 ]
 
