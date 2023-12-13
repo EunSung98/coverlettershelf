@@ -81,23 +81,31 @@ END
 - footer.jsp : 웹 페이지 밑 부분
 - error.jsp : error 발생시 이동
 2. 첫화면, 로그인/회원가입 
-- home.jsp : 간단한 소개, 로그인&회원가입 유도
-- loginService/login.jsp : 로그인
-- loginService/memberJoin.jsp : 회원가입
+- home.jsp : 간단한 소개, 로그인&회원가입 유도 <br>
+<img src="https://github.com/EunSung98/coverlettershelf/assets/77737044/2b582025-3090-4f8a-aca8-e2abf1539fa1" width="40%" height="40%"/>  <br>
+- loginService/login.jsp : 로그인  <br>
+<img src="https://github.com/EunSung98/coverlettershelf/assets/77737044/39d87818-edbc-4c11-ada6-2a79d7f01778](https://github.com/EunSung98/coverlettershelf/assets/77737044/698fee16-d8c3-415d-bb14-21d41184ee3a)" width="40%" height="40%"/>  <br>
+- loginService/memberJoin.jsp : 회원가입  <br>
+<img src="https://github.com/EunSung98/coverlettershelf/assets/77737044/3cb82322-2d5d-4893-a02c-021c9755b158" width="40%" height="40%"/>  <br> 
+
 3. 자소서 페이지
-- board/main.jsp
-- board/myPage.jsp
-- board/modifyPage.jsp
+- board/main.jsp <br> 
+<img src="https://github.com/EunSung98/coverlettershelf/assets/77737044/1d80ab00-8b10-4067-ada3-4bcb02501bf2" width="40%" height="40%"/>  <br> 
+- board/myPage.jsp <br> 
+<img src="https://github.com/EunSung98/coverlettershelf/assets/77737044/f8d68d2a-f96a-4385-b86b-6197e80a983f" width="40%" height="40%"/>  <br> 
+- board/modifyPage.jsp <br>
+<img src="https://github.com/EunSung98/coverlettershelf/assets/77737044/3b70125f-441b-4cd6-b6f0-1bc5901ae500" width="40%" height="40%"/>  <br> 
 - board/upload.jsp
-- board/total.jsp
+- board/total.jsp  <br> 
+<img src="https://github.com/EunSung98/coverlettershelf/assets/77737044/29aafa55-ea6a-43e4-8c6f-0b0df33f6b99" width="40%" height="40%"/>  <br> 
 - board/page.jsp
 4. 회원 정보 
-- account/account.jsp
-- account/accountModify.jsp
+- account/account.jsp 
+<img src="https://github.com/EunSung98/coverlettershelf/assets/77737044/881dfd95-a257-4a86-ac32-117c258fcb73" width="40%" height="40%"/>  <br> 
+- account/accountModify.jsp 
+<img src="https://github.com/EunSung98/coverlettershelf/assets/77737044/c551f71e-30e9-4f75-8741-0f515421be70" width="40%" height="40%"/>  <br> 
 
-- 삭제 버튼으로 삭제하기
 
-![image](https://github.com/EunSung98/readMemo/assets/77737044/9d561d6a-33fb-4a8e-a30a-5f435a7ca62b)
 
 
 
