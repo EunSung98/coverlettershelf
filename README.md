@@ -33,13 +33,9 @@
 1. LoginServiceController.java
 2. AccountController.java
 ![controller1](https://github.com/EunSung98/coverlettershelf/assets/77737044/dfc61556-3091-4368-a98e-b2e75e3b4317)
-![image](https://github.com/EunSung98/coverlettershelf/assets/77737044/95918ffd-12e8-4d20-ac6d-80b9979561ea)
 
 3. BoardController
 ![controller2](https://github.com/EunSung98/coverlettershelf/assets/77737044/60441e87-06bd-417f-8fe1-07376b205c7e)
-![image](https://github.com/EunSung98/coverlettershelf/assets/77737044/bd5940b1-f602-4c00-a94e-897b4e832ebe)
-
-
 
 ![image](https://github.com/EunSung98/readMemo/assets/77737044/e71fe4f2-aa7e-41b0-b710-f777574d0d8c)
 
