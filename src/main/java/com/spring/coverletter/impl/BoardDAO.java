@@ -38,6 +38,7 @@ public class BoardDAO {
 			
 			pstmt.executeUpdate();
 			
+			// board_id Ã£±â
 	        ResultSet generatedKeys = pstmt.getGeneratedKeys();
 	        if (generatedKeys.next()) {
 	        	board_id = generatedKeys.getInt(1);

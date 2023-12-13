@@ -14,8 +14,10 @@ import com.spring.coverletter.impl.UserDO;
 @Controller
 @RequestMapping("/account")
 public class AccountController {
+	
 	UserDAO udao = new UserDAO();
-	 
+	
+	// 내 정보 페이지 이동
 	@RequestMapping(value = "/myAccount")
 	public String Account(HttpServletRequest request, UserDO udo,Model model) {
 		System.out.println("AccountController ==>");
@@ -31,6 +33,7 @@ public class AccountController {
 		return "/account/account";
 	}
 
+	// 내 정보 수정 페이지 이동
 	@RequestMapping(value = "/myAccountModify")
 	public String AccountModify(HttpServletRequest request,UserDO udo,Model model) {
 		System.out.println("AccountModifyController ==>");
@@ -44,6 +47,7 @@ public class AccountController {
 		return "/account/accountModify";
 	}
 
+	// 내 정보 수정 
 	@RequestMapping(value = "/myAccountModifyProc")
 	public String AccountModifyProc(HttpServletRequest request,@ModelAttribute UserDO udo,Model model) {
 		System.out.println("AccountModifyController ==>");
@@ -52,21 +56,13 @@ public class AccountController {
 
 		String user_id = (String) session.getAttribute("id");
 
-//		String id = request.getParameter("id");
-//		String name = request.getParameter("name");
-//		String pw = request.getParameter("pw");
-//		Integer age = Integer.valueOf(request.getParameter("age"));
-//		udo.setId(id);
-//		udo.setName(name);
-//		udo.setPw(pw);
-//		udo.setAge(age);
-
 		udo = udao.modifyMyinfo(udo, user_id);
 
 		model.addAttribute("user", udo);
 		return "/account/account";
 	}
 
+	// 내 정보 삭제 (procedure 사용)
 	@RequestMapping(value = "/deleteMyAccount")
 	public String DeleteAccount(HttpServletRequest request, UserDO udo,Model model) {
 		System.out.println("AccountModifyController ==>");

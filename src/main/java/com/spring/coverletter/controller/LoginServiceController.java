@@ -25,6 +25,7 @@ public class LoginServiceController {
 	private final UserDAO udao = new UserDAO();
 	private final BoardDAO bdao = new BoardDAO();
     
+	// 로그인 페이지 이동
 	@RequestMapping(value = "/login")
  	public String Login(HttpServletRequest request, HttpServletResponse response) {
 		System.out.println("LoginController ==>");
@@ -46,6 +47,7 @@ public class LoginServiceController {
 		return "/loginService/login";
 	}
 
+	// 로그인 처리
 	@PostMapping(value = "/loginProc")
 	public String LoginProc(HttpServletRequest request, HttpServletResponse response, UserDO udo,
 			@RequestParam String id,@RequestParam String pw,@RequestParam(required=false) String rememberId,
@@ -58,6 +60,7 @@ public class LoginServiceController {
 
 		for (UserDO user : uList) {
 			if (user.getId().equals(id) && user.getPw().equals(pw)) {
+				
 				if ("1".equals(rememberId)) {
 					Cookie cookie = new Cookie("id", id);
 					cookie.setSecure(true);
@@ -78,12 +81,14 @@ public class LoginServiceController {
 		return "/loginService/login";
 	}
 
+	// 회원가입 페이지로 이동
 	@RequestMapping(value = "/memberJoin")
 	public String MemberJoin() {
 		System.out.println("MemberJoinController ==>");
 		return "/loginService/memberJoin";
 	}
 
+	// 회원가입 페이지 처리
 	@PostMapping(value = "/memberJoinProc")
 	public String MemberJoinProc(@RequestParam String id,@RequestParam String pw,
             @RequestParam(required=false) String name, @RequestParam(required=false) Integer age,UserDO udo) {
@@ -99,6 +104,7 @@ public class LoginServiceController {
 		return "/loginService/login";
 	}
 
+	// 로그아웃
 	@RequestMapping(value = "/logout")
 	public String Logout(HttpServletRequest request,ArrayList<BoardDO> bList, Model model) {
 		System.out.println("LogoutController ==>");
