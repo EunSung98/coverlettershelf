@@ -36,15 +36,25 @@
 
 3. BoardController
 ![controller2](https://github.com/EunSung98/coverlettershelf/assets/77737044/60441e87-06bd-417f-8fe1-07376b205c7e)
-
-![image](https://github.com/EunSung98/readMemo/assets/77737044/e71fe4f2-aa7e-41b0-b710-f777574d0d8c)
-
+---
 ## coverletter DB의 ERD
 ![coverletter_erd](https://github.com/EunSung98/coverlettershelf/assets/77737044/7d724936-f1ac-4833-b423-ae5ce2e178a3)
 
 - 회원 아이디를 books 테이블의 외래키로 지정해 연결
 
-[ 10일 내에 로그인시 계정 탈퇴 취소되는 procedure ]
+[ trigger ]
+- 외래키가 삭제될 때 해당 질문 row 삭제
+```sql
+CREATE TRIGGER delete_questions
+BEFORE DELETE
+ON board FOR EACH ROW
+BEGIN
+    DELETE FROM questions WHERE board_id = OLD.board_id;
+END;
+```
+
+[ procedure ]
+- procedure10일 내에 로그인시 계정 탈퇴 취소되는
 ```sql
 CREATE PROCEDURE deleteAccount()
 BEGIN
