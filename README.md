@@ -62,27 +62,14 @@ END;
 [ procedure ]
 - procedure10일 내에 로그인시 계정 탈퇴 취소되는
 ```sql
-CREATE PROCEDURE deleteAccount()
 BEGIN
-  DECLARE currentDate TIMESTAMP;
-  DECLARE tenDaysAgo TIMESTAMP;
+    UPDATE users
+    SET deleteDate = NULL
+    WHERE lastLogin <= DATE_SUB(deleteDate, INTERVAL 10 DAY) AND deleteDate IS NOT NULL;
 
-  -- 현재 시간 
-  SET currentDate = NOW();
-
-  -- 10일 전 날짜 계산
-  SET tenDaysAgo = DATE_SUB(currentDate, INTERVAL 10 DAY);
-
-  -- 10일내 로그인 하는지 확인
-  UPDATE users
-  SET deleteDate = NULL
-  WHERE lastLogin >= tenDaysAgo;
-
-  -- 10일 이후인 회원 삭제
-  DELETE FROM users
-  WHERE deleteDate IS NOT NULL AND deleteDate < tenDaysAgo;
-
-END 
+    DELETE FROM users
+    WHERE lastLogin > DATE_SUB(NOW(), INTERVAL 10 DAY) AND deleteDate IS NOT NULL;
+END
 ```
 ---
 ## [ View jsp 파일 설명 ]
